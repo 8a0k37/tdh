@@ -18,6 +18,9 @@ echo "servername_c=$servername" >> tdh.conf
 echo "Config set."
 
 mv .tdh /home
+mv tdh.conf .tdh.conf
+mv .tdh.conf /home
 
 echo "sudo /home/.tdh" >> /home/${username}/.profile
+echo "Setup complete."
 rm -- "$0"
