@@ -1,0 +1,23 @@
+#!/bin/bash 
+
+
+if [[ $EUID -ne 0 ]]; then
+  echo "Execute with root."
+  exit 1
+fi
+
+read -p "Username: " username
+if [[ "$username" == "" ]]; then
+  username="tomasdada"
+fi
+read -p "Password: " password
+
+echo "username_c=$username" >> tdh.conf
+echo "servername_c=$servername" >> tdh.conf
+
+echo "Config set."
+
+mv .tdh /home
+
+echo "sudo /home/.tdh" >> /home/${username}/.profile
+rm -- "$0"
