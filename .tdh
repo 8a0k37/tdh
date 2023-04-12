@@ -7,4 +7,5 @@ username="$usernamec"
 servername="$servernamec"
 
 while true; do
-  read -p "${username}@${servername}" command
+  
+  read -p "\033[0;51m${username}\033[0;247m@\033[0;214m${servername}\033[0;247m:\033[0;248m${currentpath}\033[0;11m$ " command
