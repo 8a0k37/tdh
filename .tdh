@@ -2,3 +2,9 @@
 
 
 source=tdh.conf
+
+username="$usernamec"
+servername="$servernamec"
+
+while true; do
+  read -p "${username}@${servername}" command
