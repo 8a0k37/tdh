@@ -12,6 +12,8 @@ if [[ "$username" == "" ]]; then
 fi
 read -p "Password: " password
 
+touch tdh.conf
+
 echo "username_c=$username" >> tdh.conf
 echo "servername_c=$servername" >> tdh.conf
 
